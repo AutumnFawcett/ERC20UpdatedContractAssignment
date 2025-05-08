@@ -93,7 +93,7 @@ contract ERC20 {
         _mint(msg.sender, msg.value);
     }
 
-    // ✅ New function: redeem tikens and get back ETH
+    // ✅ New function: redeem tokens and get back ETH
     function redeem(uint256 amount) external {
         require(allowance[msg.sender][address(this)] >= amount, "Contract not approved to spend tokens");
         require(balanceOf[msg.sender] >= amount, "Not enough tokens");
