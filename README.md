@@ -76,7 +76,7 @@ function deposit() external payable {
 ```
 
 #### ✅ Summary of Changes:
-- Added ````deposit()``` to accept ETH and mint same amount of tokens.
+- Added ```deposit()``` to accept ETH and mint same amount of tokens.
 - Added ```redeem()``` to take tokens, burn them, and send ETH back.
 - Used internal ```_mint``` and ```_burn``` already in your contract.
 - Included ```require()``` checks for safety and clarity.
