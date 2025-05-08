@@ -87,13 +87,13 @@ contract ERC20 {
         return true;
     }
 
-    // New function: deposit Ether and mint same amount of tokens
+    // ✅ New function: deposit Ether and mint same amount of tokens
     function deposit() external payable {
         require(msg.value > 0, "Must send Ether to deposit");
         _mint(msg.sender, msg.value);
     }
 
-    // New function: redeem tikens and get back ETH
+    // ✅ New function: redeem tikens and get back ETH
     function redeem(uint256 amount) external {
         require(allowance[msg.sender][address(this)] >= amount, "Contract not approved to spend tokens");
         require(balanceOf[msg.sender] >= amount, "Not enough tokens");
