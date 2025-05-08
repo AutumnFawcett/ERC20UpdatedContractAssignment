@@ -58,7 +58,7 @@ function deposit() external payable {
 - Call ```_burn()``` to destroy those tokens from the contract's balance.
 - Finally, use ```payable``` to send the same amount of Ether back to the user.
 ```
-  // ✅ New function: redeem tikens and get back ETH
+  // ✅ New function: redeem tokens and get back ETH
     function redeem(uint256 amount) external {
         require(allowance[msg.sender][address(this)] >= amount, "Contract not approved to spend tokens");
         require(balanceOf[msg.sender] >= amount, "Not enough tokens");
